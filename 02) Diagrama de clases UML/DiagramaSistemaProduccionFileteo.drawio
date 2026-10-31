@@ -1,0 +1,113 @@
+<mxfile host="app.diagrams.net" agent="Antigravity">
+  <diagram id="uml_class_diagram" name="Diagrama de Clases - Sistema Produccion Fileteo">
+    <mxGraphModel dx="1471" dy="940" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GestorProduccion" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;" value="GestorProduccion" vertex="1">
+          <mxGeometry height="153" width="280" x="60" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GestorProduccion_attrs" parent="GestorProduccion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="- registros : List" vertex="1">
+          <mxGeometry height="26" width="280" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="GestorProduccion_sep" parent="GestorProduccion" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="GestorProduccion_m1" parent="GestorProduccion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="+ GestorProduccion()" vertex="1">
+          <mxGeometry height="26" width="280" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="GestorProduccion_m2" parent="GestorProduccion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="+ agregarRegistro(registro: RegistroFileteo) : void" vertex="1">
+          <mxGeometry height="39" width="280" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="GestorProduccion_m3" parent="GestorProduccion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="+ cerrarRegistroFileteo() : void" vertex="1">
+          <mxGeometry height="26" width="280" y="127" as="geometry" />
+        </mxCell>
+        <mxCell id="RegistroFileteo" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;" value="RegistroFileteo" vertex="1">
+          <mxGeometry height="430" width="380" x="460" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RegistroFileteo_attrs" parent="RegistroFileteo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="- fechaProduccion : Date&#xa;- lote : String&#xa;- pesoInicial : double&#xa;- pesoLomos : double&#xa;- pesoDesperdicio : double&#xa;- operario : OperarioProduccion" vertex="1">
+          <mxGeometry height="110" width="380" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="RegistroFileteo_sep" parent="RegistroFileteo" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="380" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="RegistroFileteo_methods" parent="RegistroFileteo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="+ RegistroFileteo(fechaProduccion: Date, lote: String, pesoInicial: double, pesoLomos: double, pesoDesperdicio: double, operario: OperarioProduccion)&lt;br&gt;+ calcularRendimientoPorcentaje() : double&lt;br&gt;+ evaluarRendimiento() : String&lt;br&gt;+ getFechaProduccion() : Date&lt;br&gt;+ getLote() : String&lt;br&gt;+ getOperario() : OperarioProduccion&lt;br&gt;+ getPesoLomos() : double&lt;br&gt;+ getPesoDesperdicio() : double&lt;br&gt;+ getPesoInicial() : double&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ RegistroFileteo(lote: String, pesoInicial: double, pesoLomos: double, pesoDesperdicio: double, operario: OperarioProduccion)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="284" width="380" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="OperarioProduccion" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;" value="OperarioProduccion" vertex="1">
+          <mxGeometry height="190" width="340" x="930" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="OperarioProduccion_attrs" parent="OperarioProduccion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="- codigo : String&#xa;- nombre : String&#xa;- turno : String" vertex="1">
+          <mxGeometry height="60" width="340" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="OperarioProduccion_sep" parent="OperarioProduccion" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="340" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="OperarioProduccion_methods" parent="OperarioProduccion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="+ OperarioProduccion(codigo: String, nombre: String, turno: String)&#xa;+ getCodigo() : String&#xa;+ getNombre() : String&#xa;+ getTurno() : String" vertex="1">
+          <mxGeometry height="94" width="340" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="Main" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=14;" value="Main" vertex="1">
+          <mxGeometry height="80" width="240" x="120" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Main_attrs" parent="Main" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="12" width="240" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Main_sep" parent="Main" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Main_methods" parent="Main" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=14;" value="+ main(args: String[]) : void" vertex="1">
+          <mxGeometry height="32" width="240" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_gestor_registro" edge="1" parent="1" source="GestorProduccion" style="endArrow=none;html=1;rounded=0;startArrow=diamondThin;startFill=0;startSize=14;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.3;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="RegistroFileteo" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_gestor_mult" connectable="0" parent="rel_gestor_registro" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=15;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" y="1" as="geometry">
+            <mxPoint x="10" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_registro_mult" connectable="0" parent="rel_gestor_registro" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=15;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.85" y="1" as="geometry">
+            <mxPoint x="-15" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_registro_role" connectable="0" parent="rel_gestor_registro" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];fontSize=11;" value="- registros" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-1" as="geometry">
+            <mxPoint x="-15" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_registro_operario" edge="1" parent="1" source="RegistroFileteo" style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OperarioProduccion" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_reg_op_mult_src" connectable="0" parent="rel_registro_operario" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=15;" value="*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" y="1" as="geometry">
+            <mxPoint x="10" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_reg_op_mult_dst" connectable="0" parent="rel_registro_operario" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=14;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.85" y="1" as="geometry">
+            <mxPoint x="-15" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_reg_op_role" connectable="0" parent="rel_registro_operario" style="edgeLabel;html=1;align=right;verticalAlign=top;resizable=0;points=[];fontSize=15;" value="- operario" vertex="1">
+          <mxGeometry relative="1" x="0.8" y="-1" as="geometry">
+            <mxPoint x="-15" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel_main_gestor" edge="1" parent="1" source="Main" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;endSize=8;edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;" target="GestorProduccion" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_main_registro" edge="1" parent="1" source="Main" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;endSize=8;edgeStyle=orthogonalEdgeStyle;exitX=0.85;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fontSize=14;" target="RegistroFileteo" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_main_operario" edge="1" parent="1" source="Main" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;endSize=8;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;" target="OperarioProduccion" value="«use»">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

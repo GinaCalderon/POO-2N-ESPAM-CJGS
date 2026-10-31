@@ -1,0 +1,6 @@
+# Archivos compilados de Java
+*.class
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
